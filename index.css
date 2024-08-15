@@ -1,0 +1,427 @@
+/* Import font from google */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-decoration: none;
+}
+body {
+  font-family: "Bebas Neue", sans-serif;
+  background-color: #1f1f1f;
+}
+.home,
+.anime-content > section {
+  width: 75em;
+  margin: 0 auto;
+}
+/* Navigationn styling */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.7em;
+  padding: 0.6em 0 2em;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 15em;
+}
+header ul li > a:hover {
+  color: #ff7300;
+  transition: color 200ms;
+}
+.title {
+  font-size: 1.5em;
+}
+.bi-list-nested,
+.bi-x-circle {
+  display: none;
+  cursor: pointer;
+}
+.err-img {
+  height: 100vh;
+  padding: 0;
+  background-image: url(./assets/404-error.webp);
+  background-size: cover;
+  background-position: 5% 34%;
+  background-repeat: no-repeat;
+  padding: 45vh 0;
+}
+.err-img p {
+  color: #1f1f1f;
+  cursor: pointer;
+}
+.err-img p:hover {
+  color: #ff7b00;
+}
+/* Intro page styling */
+.bg-container {
+  background-image: url("./assets/home-bg.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.home-content {
+  display: grid;
+  place-items: center;
+  height: 99vh;
+  width: 10em;
+  opacity: 1;
+}
+.home-content div h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 6em;
+  transition: 200ms;
+  animation: fade 3.5s linear infinite;
+}
+/* Animation for fading in & out of the text */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Top anime content */
+.anime-content {
+  background-color: #008080;
+  padding: 8em 0;
+}
+.anime-content h1 {
+  font-size: 4em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.anime-content > section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.anime-intro {
+  width: 13.9em;
+  display: grid;
+  row-gap: 0.7em;
+  cursor: pointer;
+}
+.anime-intro:hover .comic-desc,
+.comic-intro:hover .comic-desc,
+.item:hover .item-desc {
+  color: #ff7300;
+}
+.action-figure {
+  height: 17.5em;
+  width: 100%;
+  transition: 200ms;
+}
+.action-figure img,
+.comic-image img {
+  border-radius: 1em;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 8% top;
+  box-shadow: 1px 1px 13px #5a554b;
+}
+.comic-desc {
+  font-size: 1.2em;
+  height: 2.5em;
+  transition: 200ms;
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-weight: 700;
+}
+.anime-intro:hover .action-figure,
+.comic-intro:hover .comic-image,
+.item:hover .item-image {
+  translate: 0 -10px;
+}
+
+/* Comic content style */
+.comic-content,
+.series {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5em 3em;
+  padding-bottom: 4em;
+}
+.comic-intro {
+  display: grid;
+  row-gap: 1em;
+  width: 16.5em;
+  cursor: pointer;
+}
+.comic-image {
+  height: 23em;
+  transition: 200ms;
+}
+/* readContent style */
+.body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 10% 40%;
+  width: 100%;
+  backdrop-filter: blur(15px);
+}
+#content-container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-weight: 700;
+}
+.com-img {
+  width: 33em;
+  height: 100%;
+}
+.readerContent {
+  width: 35em;
+  display: grid;
+  row-gap: 2.5em;
+  font-size: 1.1em;
+}
+.creators {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2.5em;
+}
+.items-root {
+  background-color: #eeeeee;
+}
+.items-root div {
+  padding: 10px 0 1.5em 2em;
+  font-size: larger;
+}
+.items-root div label {
+  color: #1f1f1f;
+  font-weight: 600;
+  accent-color: red;
+  padding-right: 15px;
+}
+.items-root div label input {
+  margin-right: 4px;
+}
+.items-container {
+  width: 75em;
+  margin: 0 auto;
+  padding: 6em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5em 2em;
+}
+.item {
+  display: grid;
+  row-gap: 1em;
+  cursor: pointer;
+  place-content: center;
+  width: 23.5em;
+}
+.item-image {
+  transition: 300ms;
+  width: inherit;
+}
+.item-image > img {
+  object-position: 0 32%;
+  width: 100%;
+  object-fit: cover;
+  height: 20em;
+  box-shadow: 0 0 10px 2px #1f1f1f;
+}
+.item-desc {
+  height: 2.6em;
+  font-size: 1.3em;
+  color: #1f1f1f;
+  transition: 300ms;
+}
+
+/* Responsiveness */
+/* Responsiveness for ipad */
+@media only screen and (max-width: 76em) {
+  /* General style */
+  header {
+    padding: 0.6em 1em 2em;
+  }
+  .home,
+  .items-container,
+  .anime-content > section {
+    width: 100%;
+  }
+  /* Intro page styling */
+  .anime-content > section {
+    display: grid;
+    place-content: space-around;
+    place-items: center;
+    row-gap: 4em;
+  }
+  .anime-content > section > section:first-child {
+    grid-column: 1/3;
+  }
+  .anime-intro {
+    width: 20em;
+  }
+  .anime-intro > section:last-child,
+  .comic-intro > section:last-child {
+    display: grid;
+    place-items: center;
+    width: 100%;
+  }
+  .comic-desc {
+    text-align: center;
+    height: 100%;
+  }
+
+  /* combined style */
+  .action-figure,
+  .comic-image {
+    height: 25em;
+  }
+
+  /*Comic style*/
+  .comic-content,
+  .series {
+    justify-content: space-around;
+    gap: 5em 0;
+  }
+  .comic-intro {
+    width: 25em;
+  }
+  /* readContent style */
+  #content-container {
+    justify-content: center;
+    row-gap: 2em;
+  }
+  .com-img {
+    width: 100%;
+  }
+  .load {
+    padding-left: 1em;
+  }
+}
+
+/* Responsiveness for mobile */
+@media only screen and (max-width: 730px) {
+  /* General styling  */
+  header ul {
+    display: none;
+  }
+  .err-img {
+    background-position: 30% 0%;
+  }
+  .bi-list-nested,
+  .bi-x-circle {
+    display: block;
+    font-size: 1.2em;
+  }
+  .title {
+    font-size: 1.2em;
+  }
+  .show {
+    display: block;
+    position: absolute;
+    top: 2.2em;
+    left: 0;
+    width: 100%;
+    background-color: #008080;
+    z-index: 3;
+  }
+  header ul li {
+    padding: 0.3em 0 0.4em 1em;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 2px;
+    width: 100%;
+    position: relative;
+  }
+  header ul li:first-child {
+    border-top: 2px solid #ffffff;
+  }
+
+  /* Intro page styling */
+  .anime-content {
+    padding: 8em 1em;
+  }
+  .anime-content > section {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 7em;
+  }
+  .home-content div h1 {
+    width: 100%;
+    font-size: 4em;
+  }
+  /* comic styling */
+  .comic-content,
+  .series {
+    margin-top: 3em;
+  }
+  /* readContent style */
+  #content-container > div {
+    width: 100%;
+  }
+  .readerContent {
+    width: 100%;
+    padding: 0 6vw;
+  }
+}
+@media only screen and (max-width: 450px) {
+  /* General styling */
+  .home {
+    padding: 0 1em;
+  }
+  .err-img {
+    height: 80vh;
+    background-position: 42% 0%;
+  }
+  header {
+    padding: 0.6em 0 2em;
+  }
+  /* Intro page syling */
+  .anime-content h1 {
+    font-size: 2.3em;
+  }
+  .anime-intro {
+    width: 100%;
+  }
+  .anime-intro .comic-desc {
+    text-align: center;
+    height: 100%;
+  }
+
+  /* Comic styling */
+  .comic-content,
+  .series {
+    gap: 7em 0;
+  }
+  .comic-intro {
+    width: 100%;
+  }
+  .comic-image {
+    height: 100%;
+  }
+  /* readContent style */
+  .load {
+    padding-left: 0;
+  }
+  .items-root {
+    padding: 0 1em;
+  }
+  .readerContent {
+    padding: 0;
+  }
+  .items-root div {
+    text-align: center;
+    padding-left: 0;
+  }
+}

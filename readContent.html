@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta name="description" content="Read Content page" />
+    <!-- OG(open graph) meta tags to display content on social media platforms -->
+    <meta property="og:description" content="Read Content page" />
+    <meta property="og:image" content="./assets/favicon.webp" />
+    <meta
+      property="og:url"
+      content="https://nato-plus.vercel.app/readContent.html"
+    />
+    <meta property="og:type" content="website" />
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="loader.css" />
+    <style></style>
+  </head>
+  <body class="body">
+    <!-- Home container -->
+    <section
+      class="home"
+      style="background-color: transparent; padding-bottom: 2em; height: 100%"
+    >
+      <header>
+        <section class="title">
+          <p>Nato-plus</p>
+        </section>
+        <nav>
+          <i class="bi bi-list-nested"></i>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./Comic.html">Comics</a></li>
+            <li><a href="./Series.html">Series</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- loader container -->
+      <div class="load">Loading<span>.</span><span>.</span><span>.</span></div>
+      <!-- Comic info container -->
+      <section id="content-container">
+        <!-- Image for the cover -->
+        <figure id="cover"></figure>
+        <div>
+          <!-- Read content section -->
+          <section class="readerContent"></section>
+        </div>
+      </section>
+    </section>
+    <section style="display: none" class="items-root">
+      <div>
+        <label for="variants"
+          ><input type="checkbox" name="Variants" id="variants" />SHOW
+          VARIANTS</label
+        >
+        <label for="stories">
+          <input type="checkbox" name="Stories" id="stories" />SHOW STORIES
+        </label>
+      </div>
+      <h1
+        id="read-heading"
+        style="color: #171717; font-size: 3em; text-align: center"
+      ></h1>
+      <section class="items-container"></section>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
